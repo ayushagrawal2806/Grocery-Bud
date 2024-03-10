@@ -39,16 +39,19 @@ let Grocery = () => {
     toast.success("Item Deleted");
   };
 
-
+  useEffect(() => {
+    let arr = JSON.parse(localStorage.getItem("item"));
+    if(arr && arr.length > 0){
+      setItems([...arr])
+    }
+    
+  }, [])
 
   useEffect(() => {
       localStorage.setItem("item" , JSON.stringify(items))
   } , [items])
 
-  useEffect(() => {
-      let arr = JSON.parse(localStorage.getItem("item"));
-      setItems([...arr])
-  }, [])
+ 
 
 
 
