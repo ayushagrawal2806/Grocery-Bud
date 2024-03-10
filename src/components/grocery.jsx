@@ -91,7 +91,7 @@ let Grocery = () => {
             pauseOnHover
             theme="light"
             bodyClassName= "toastbody"
-        />;
+        />
 
     </div>
   );
